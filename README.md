@@ -10,6 +10,20 @@ This simulation models how a cold gas cloud undergoes gravitational collapse to 
 
 The visualization shows two orthogonal projections (face-on and edge-on) with particle colors and sizes representing local density, transitioning from a cold molecular cloud through various collapse stages until protostar formation.
 
+## 📺 Animation Preview
+
+<div align="center">
+
+![Star Formation Simulation](star_formation.gif)
+
+*Gravitational collapse of a 1 M☉ molecular cloud over ~120,000 years*
+
+**Left:** Face-on view (XY plane) | **Right:** Edge-on view (XZ plane)
+
+</div>
+
+---
+
 ## Features
 
 - **Physically accurate N-body gravity** with softening to handle close encounters
