@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starformation-research"
+version = "0.3.0"
+description = "Validated collisionless N-body research workflow"
+requires-python = ">=3.13,<3.14"
+dependencies = ["numpy>=2.4,<3", "astropy>=7.2,<8"]
+
+[project.optional-dependencies]
+render = ["matplotlib>=3.10,<4"]
+
+[project.scripts]
+sf-simulate = "starformation.cli_simulate:main"
+sf-render = "starformation.cli_render:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

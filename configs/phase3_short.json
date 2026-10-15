@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "cloud_mass_msun": 1.0,
+  "radius_pc": 0.1,
+  "particle_count": 300,
+  "seed": 42,
+  "gravitational_constant_si": 6.6743e-11,
+  "softening_over_radius": 0.05,
+  "dt_over_initial_tff": 0.006,
+  "steps": 8,
+  "velocity_sigma_over_virial": 0.05,
+  "rotation_omega_over_dynamical": 0.03,
+  "recenter_com": false,
+  "recenter_velocity": false,
+  "sound_speed_m_s": 200.0,
+  "neighbours": 16,
+  "energy_budget": 0.01,
+  "output": {"simulation_path": null, "render_path": null},
+  "render": {"view": "com", "animation": false, "fps": 5, "dpi": 120}
+}

@@ -3,6 +3,26 @@
 The current model is a softened, collisionless gravitational N-body calculation.
 It does not evolve gas pressure, temperature, hydrodynamics, or stellar structure.
 
+Phase 3 now provides a modular, configuration-driven research package while
+preserving the validated Phase 0–2 results and legacy APIs. See the
+[Phase 3 architecture report](docs/PHASE3_ARCHITECTURE.md) for module boundaries,
+schemas, compatibility choices, reproducibility evidence, and limitations.
+Run a small explicit experiment and render it separately (new output paths only):
+
+```sh
+.venv/bin/python -B -m starformation.cli_simulate \
+  --config configs/phase3_short.json --output /private/tmp/my-new-run
+.venv/bin/python -B -m starformation.cli_render /private/tmp/my-new-run \
+  --output /private/tmp/my-new-figures --view com
+```
+
+The package supports Python 3.13, NumPy 2.4, and Astropy 7.2 (see
+`pyproject.toml` for ranges). Optional rendering uses Matplotlib 3.10. For
+installation: `.venv/bin/python -m pip install -e '.[render]'`. The source-tree
+commands above require no install in the existing environment. Importing
+`starformation` from the repository root uses a safe package bridge; directly
+running the historical `starformation.py` still launches the full legacy job.
+
 Phase 2 adds measured COM-centred cloud sizes, enclosed and neighbour-based particle
 density estimates, hypothetical Jeans scales, virial and inflow diagnostics, and
 scientific visualization of saved data. See the
