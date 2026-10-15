@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "90cccfc0ad5832b84b8b97999a03cc1f97d3440b",
+  "tolerances_declared_before_runs": {
+    "analytic_relative": 1e-12,
+    "potential_gradient_relative": 1e-06,
+    "legacy_relative": 1e-12,
+    "convergence_order_min": 1.8,
+    "convergence_order_max": 2.2,
+    "orbit_finest_relative_position": 0.002,
+    "orbit_max_relative_energy": 0.01,
+    "cloud_max_relative_energy": 0.01,
+    "normalized_momentum_drift": 1e-10,
+    "normalized_angular_momentum_drift": 1e-10,
+    "normalized_com_residual": 1e-10
+  },
+  "orbits": {
+    "G": 1.0,
+    "masses": [
+      0.4,
+      0.6
+    ],
+    "separation_or_semimajor_axis": 1.0,
+    "periods": 2,
+    "steps_per_period": [
+      100,
+      200,
+      400,
+      800
+    ],
+    "circular_softening": [
+      0.0,
+      0.05,
+      0.2,
+      0.5
+    ],
+    "kepler_eccentricity": 0.3
+  },
+  "cloud": {
+    "source": "Phase 0 hash-checked seed-42 initial state; no recentering",
+    "particles": 300,
+    "seed": 42,
+    "end_time_over_initial_tff": 1.2,
+    "dt_over_initial_tff": [
+      0.012,
+      0.006,
+      0.003
+    ],
+    "softening_over_initial_radius": 0.05,
+    "diagnostic_stride": 1
+  }
+}

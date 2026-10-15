@@ -1,0 +1,95 @@
+{
+  "config": {
+    "schema_version": 1,
+    "baseline_commit": "90cccfc0ad5832b84b8b97999a03cc1f97d3440b",
+    "tolerances_declared_before_runs": {
+      "analytic_relative": 1e-12,
+      "potential_gradient_relative": 1e-06,
+      "legacy_relative": 1e-12,
+      "convergence_order_min": 1.8,
+      "convergence_order_max": 2.2,
+      "orbit_finest_relative_position": 0.002,
+      "orbit_max_relative_energy": 0.01,
+      "cloud_max_relative_energy": 0.01,
+      "normalized_momentum_drift": 1e-10,
+      "normalized_angular_momentum_drift": 1e-10,
+      "normalized_com_residual": 1e-10
+    },
+    "orbits": {
+      "G": 1.0,
+      "masses": [
+        0.4,
+        0.6
+      ],
+      "separation_or_semimajor_axis": 1.0,
+      "periods": 2,
+      "steps_per_period": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "circular_softening": [
+        0.0,
+        0.05,
+        0.2,
+        0.5
+      ],
+      "kepler_eccentricity": 0.3
+    },
+    "cloud": {
+      "source": "Phase 0 hash-checked seed-42 initial state; no recentering",
+      "particles": 300,
+      "seed": 42,
+      "end_time_over_initial_tff": 1.2,
+      "dt_over_initial_tff": [
+        0.012,
+        0.006,
+        0.003
+      ],
+      "softening_over_initial_radius": 0.05,
+      "diagnostic_stride": 1
+    }
+  },
+  "checks": {
+    "orbit_second_order": true,
+    "orbit_finest_position_accuracy": true,
+    "orbit_energy_budget": true,
+    "cloud_energy_budget": false,
+    "momentum_budget": true,
+    "angular_momentum_budget": true,
+    "com_budget": true
+  },
+  "wall_time_s": 13.501497332938015,
+  "python": "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "numpy": "2.4.4",
+    "astropy": "7.2.0",
+    "matplotlib": "3.10.8"
+  },
+  "git_head": "90cccfc0ad5832b84b8b97999a03cc1f97d3440b",
+  "git_status": "?? experiments/\n?? nbody.py\n?? tests/test_nbody.py\n?? validation/\n",
+  "input_sha256": {
+    "nbody.py": "80c21f48535c6c3f875b33e76fbf90867fb3cd6b04de991d1ada1381a02b1213",
+    "experiments/validate_nbody.py": "f15c1cfe8dc7b4552b9edd4b5db1e5cc0bc2210adb128c55713277e57d8689ac",
+    "experiments/phase1_config.json": "6cb148284d50a4575c4207c481de50e84a0ece1ff5f6450ab7b96e62510d1439",
+    "tests/baseline_support.py": "bfba365ccd7b78180765d6dfc89a441c9fa17e1aacbccea9647f6cc53e50a48a",
+    "baseline/manifest.json": "12802baa727d4f2ae3cb70d85116173b8c4c4cce8f90583cb15c7b640cb19d54",
+    "baseline/reference.json": "48ca73fd879197522f0bc57e4b98150d5c59e9e9dbffb57c957ca5083bef6750",
+    "starformation.py": "a30fd78d36c72141d1716a08e6c06dd0f2b80d658a0b785ebe39d1012ea6f438"
+  },
+  "units": {
+    "cloud": "SI; normalized errors dimensionless",
+    "orbits": "G=M_total=a=1 consistent dimensionless units"
+  },
+  "cloud_position_self_difference_rms_over_R": [
+    0.0007126033084344545,
+    0.0001773464516482412
+  ],
+  "cloud_position_self_convergence_order": 2.0065287164626158,
+  "warnings": [
+    "FAILED criterion: cloud_energy_budget"
+  ],
+  "scope": "Two orbital periods; cloud 1.2 initial free-fall times. No long-term stability claim."
+}
