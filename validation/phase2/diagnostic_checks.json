@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "acceptance": {
+    "analytical_relative_tolerance": 1e-12,
+    "uniform_interior_mean_relative_tolerance": 0.1,
+    "uniform_sphere_continuum_radius_tolerance": 0.001,
+    "serialization": "exact finite round trip; undefined -> null"
+  },
+  "tests": {
+    "passed": 53,
+    "failed": 0,
+    "phase0_phase1_unchanged_tests": 27,
+    "phase2_tests": 26,
+    "observed_runtime_s": 9.438
+  },
+  "uniform_density": {
+    "interior_count": 706,
+    "interior_mean": 1.0389381372823292,
+    "interior_std": 0.18394115407278513,
+    "true_density": 1.0,
+    "all_particle_mean": 0.8291152640042458,
+    "interior_mean_relative_error": 0.0389381372823292
+  },
+  "uniform_sphere_relative_errors": {
+    "r50": 0.0003334445062140867,
+    "rms_radius": 4.554265768952348e-07
+  },
+  "hand_case_relative_errors": {
+    "rms_radius": 0.0,
+    "enclosed_mean_density": 0.0,
+    "jeans_length": 0.0,
+    "jeans_mass": 0.0
+  },
+  "phase1_energy_history_relative_difference": {
+    "dt0.006": 0.0,
+    "dt0.012": 0.0
+  },
+  "run_peak_energy_error": {
+    "dt0.006": 0.004918177299339049,
+    "dt0.012": 0.019005008127973757
+  },
+  "source_sha256": {
+    "scientific_diagnostics.py": "905b8c5866256a6bd0588017e1acf595f6735a41dbe34df64a079cfc72affb8d",
+    "scientific_visualization.py": "ee5eda354efed176400d2ceb24cf4b45f6fb1d2ed58157a69f3b744dd6d4ef1c",
+    "experiments/phase2_preview.py": "3a6458d4bd0a5e23a1341a669448c3789ee0ab76639c43dd8e65e7ec18926401",
+    "tests/test_scientific_diagnostics.py": "21025f6a12a03cc7daf1f21ecfe7d6780bc2a3292b7b2c10fae7040e4e7400a3",
+    "tests/test_scientific_visualization.py": "e0689b40ffb378e3061163e93189c78b34d9d29a12f22c4315a23adc196773b3"
+  },
+  "preservation": "Original source/media match Phase 0 SHA-256; all recorded data/rendering source hashes verified",
+  "limitations": [
+    "Whole-cube local-density mean is biased low near boundaries; interior-only tolerance is not a global guarantee.",
+    "Legacy dt0.012 fails the unchanged 1% energy budget; both runs limited to 1.2 initial t_ff."
+  ]
+}
