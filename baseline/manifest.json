@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "phase": 0,
+  "recorded_date": "2026-10-15",
+  "reference_commit": "774d69713da47c5578badb30a5981d80319bd67f",
+  "initial_working_tree": "clean",
+  "original_readme_sha256": "7a17a33ef995bb443eb05501d895d36058dbf774f9be607e3e8c2ddf68e827ac",
+  "preserved_files": {
+    "starformation.py": {"sha256": "a30fd78d36c72141d1716a08e6c06dd0f2b80d658a0b785ebe39d1012ea6f438"},
+    "star_formation.mp4": {"sha256": "78baa44c73e36f64b4bc441cfea38977e870fdcd69858d2cbf16dcb8464888c2", "bytes": 4401663, "width": 1440, "height": 720, "frames": 1080, "fps": 18, "duration_s": 60, "codec": "h264"},
+    "star_formation.gif": {"sha256": "27e3d5dc267f51d3e02dcbe87bf8f900c3b4e9bbddb88bc7625fc7eb56b5d1b5", "bytes": 3406207, "width": 1440, "height": 720, "frames": 120, "fps": 20, "duration_s": 6, "codec": "gif"}
+  },
+  "parameters": {
+    "cloud_mass_solar": 1.0,
+    "cloud_radius_pc": 0.1,
+    "sound_speed_m_s": 200.0,
+    "particles": 300,
+    "frames": 1080,
+    "seed": 42,
+    "rng": "numpy.random legacy RandomState / MT19937",
+    "softening_over_initial_radius": 0.05,
+    "dt_over_initial_free_fall_time": 0.012,
+    "gaussian_velocity_sigma_over_sqrt_GM_R": 0.05,
+    "rotation_omega_over_sqrt_GM_R3": 0.03,
+    "output_fps": 18,
+    "output_dpi": 120
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.4.4",
+    "astropy": "7.2.0",
+    "matplotlib": "3.10.8",
+    "ffmpeg": "8.1",
+    "note": "Observed environment, not proof of the environment used to generate archived media. See requirements-baseline.txt."
+  },
+  "tolerances": {
+    "physical_reference_rtol": 1e-10,
+    "regression_rtol": 1e-12,
+    "regression_atol": 0.0,
+    "preservation": "exact SHA-256 equality"
+  }
+}

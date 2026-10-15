@@ -1,5 +1,20 @@
 # Star Formation Simulation
 
+> **Phase 0 baseline status:** The source and animations below are preserved historical
+> artifacts. This is a gravity-only, softened N-body model; its gas/protostar, density,
+> temperature, Jeans-stability, and collapse-percentage claims below are not validated.
+> The computed initial free-fall time is **523,686 years**, and the last stored frame
+> is at **6.781 million years**. See [the Phase 0 baseline record](docs/PHASE0_BASELINE.md)
+> for corrected interpretation, reproducibility, tests, and limitations. The original
+> documentation remains below for traceability; scientific diagnostics will be corrected
+> in a separately authorized phase.
+>
+> Lightweight checks: `.venv/bin/python -B -m unittest discover -s tests -v`
+>
+> Running or importing `starformation.py` launches the full calculation and writes
+> `star_formation.mp4` in the working directory. Do not run it from the repository
+> to test the baseline; the safe validation command above does not render or save media.
+
 A physics-based N-body simulation of gravitational collapse in a molecular cloud, visualizing the process of protostar formation.
 
 **Author:** Eranjana Weerasinghe
