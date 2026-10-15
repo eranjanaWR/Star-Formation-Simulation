@@ -1,0 +1,11 @@
+{
+  "view": "com",
+  "half_width_au": 21175.460917060376,
+  "density_scale": "fixed logarithmic over ALL saved frames",
+  "density_vmin_kg_m3": 4.599312886498673e-18,
+  "density_vmax_kg_m3": 2.246899768419214e-14,
+  "frame_selection": "all particles; initial, peak energy error, final",
+  "animation_frames": 0,
+  "visualization_source_sha256": "ee5eda354efed176400d2ceb24cf4b45f6fb1d2ed58157a69f3b744dd6d4ef1c",
+  "source_diagnostics_sha256": "365529f6484e6077c97206f21d00b71adfaa2a15a89492da5b823bbce561c709"
+}

@@ -1,5 +1,47 @@
 # Star Formation Simulation
 
+The current model is a softened, collisionless gravitational N-body calculation.
+It does not evolve gas pressure, temperature, hydrodynamics, or stellar structure.
+
+Phase 2 adds measured COM-centred cloud sizes, enclosed and neighbour-based particle
+density estimates, hypothetical Jeans scales, virial and inflow diagnostics, and
+scientific visualization of saved data. See the
+[Phase 2 scientific diagnostics report](docs/PHASE2_SCIENTIFIC_DIAGNOSTICS.md) for
+equations, tests, numerical results, and limitations.
+
+The corrected preview explicitly uses **dt=0.006 initial t_ff for 1.2 initial t_ff**
+(628,423 years), reproducing the Phase 1 trajectory with a 0.492% peak energy error.
+The legacy timestep's 1.901% failed case is also preserved and visibly marked FAIL.
+Passing this short-interval energy criterion does not validate the full legacy movie.
+
+![Measured collisionless-cloud preview](validation/phase2/view-com/diagnostic_preview.gif)
+
+Colours show a **particle-density proxy**, with fixed temporal scaling and units;
+they do not show temperature. Jeans indicators are hypothetical gas comparisons:
+wavelengths greater than the Jeans length are unstable in idealized uniform-gas
+theory, but this gravity-only solver has no pressure force. No star-formation stage
+or elapsed-time collapse percentage is assigned.
+
+Run all baseline, numerical, and diagnostic tests:
+
+```sh
+.venv/bin/python -B -m unittest discover -s tests -v
+```
+
+Render the saved data without running a simulation (the output directory must be new):
+
+```sh
+.venv/bin/python -B scientific_visualization.py validation/phase2/dt0.006 \
+  --output validation/phase2-new-view --view com --animation
+```
+
+Use `--view fixed` for a fixed-origin view; omit `--animation` for static figures.
+The original source and MP4/GIF remain unchanged. The historical documentation
+below is retained for traceability and is superseded by the Phase 0–2 reports.
+
+<details>
+<summary>Historical documentation and original animation — scientifically superseded</summary>
+
 Phase 1 numerical verification is recorded in
 [the N-body validation report](docs/PHASE1_NBODY_VALIDATION.md), including analytical
 orbit tests, conservation histories, and the legacy timestep's failed 1% energy
@@ -130,3 +172,5 @@ As the simulation progresses, watch how the Jeans length decreases with increasi
 - Free-fall time: ~120,000 years for a 0.1 pc cloud at 1 M☉
 - Based on Bonnor-Ebert sphere initial conditions
 - Leapfrog integration: Springel et al. 2001, MNRAS 328, 726
+
+</details>
