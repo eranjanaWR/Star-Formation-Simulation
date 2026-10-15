@@ -1,5 +1,10 @@
 # Star Formation Simulation
 
+Phase 1 numerical verification is recorded in
+[the N-body validation report](docs/PHASE1_NBODY_VALIDATION.md), including analytical
+orbit tests, conservation histories, and the legacy timestep's failed 1% energy
+error budget. The legacy script and animations remain unchanged.
+
 > **Phase 0 baseline status:** The source and animations below are preserved historical
 > artifacts. This is a gravity-only, softened N-body model; its gas/protostar, density,
 > temperature, Jeans-stability, and collapse-percentage claims below are not validated.
